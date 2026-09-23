@@ -1,8 +1,10 @@
 # Sistem Manajemen Kepanitiaan dan Pelaksanaan MIT-WEEK 2025
 
-> **Nama:** Muhammad Zidane Abdul Kadir 
-> **NIM:** 2509106021
-> **Mata Kuliah:** Pemrograman Berorientasi Objek  
+| **Informasi** | **Detail** |
+|:---|:---|
+| **Nama** | Muhammad Zidane Abdul Kadir |
+| **NIM** | 2509106021 |
+| **Mata Kuliah** | Pemrograman Berorientasi Objek |
 
 ---
 
@@ -51,10 +53,12 @@ Fitur utama program meliputi:
 ## Struktur Proyek
 
 ```text
-mit-week-oop/
+Praktikum-PBO/
 │
-├── main.py
-└── README.md
+└── posttest/
+   └── posttest1/
+      ├── main.py
+      └── README.md
 ```
 
 ### Keterangan
