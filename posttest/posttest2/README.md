@@ -4,7 +4,7 @@
 |---|---|
 | Nama | Muhammad Zidane Abdul Kadir |
 | NIM | 2509106021 |
-| Mata Kuliah | Pemrograman Berorientasi Objek |
+| Praktikum | Pemrograman Berorientasi Objek |
 
 ## Deskripsi
 
