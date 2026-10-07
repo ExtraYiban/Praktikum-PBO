@@ -14,8 +14,8 @@ class Panitia:
     def tampilkan_info(self):
         print("Kode    :", self._kode_anggota)
         print("Nama    :", self.nama)
-        print("Jabatan :", self.jabatan)
-        print("Divisi  :", self.divisi)
+        print("Jabatan:", self.jabatan)
+        print("Divisi :", self.divisi)
         print("Status  :", self.__status)
 
     def koordinasikan_acara(self, acara):
@@ -73,9 +73,9 @@ class Divisi:
         Divisi.total_divisi += 1
 
     def tampilkan_info(self):
-        print("Divisi          :", self.nama_divisi)
-        print("Koordinator     :", self.koordinator)
-        print("Jumlah Anggota  :", self.__jumlah_anggota)
+        print("Divisi         :", self.nama_divisi)
+        print("Koordinator:", self.koordinator)
+        print("Jumlah Anggota :", self.__jumlah_anggota)
 
     @property
     def jumlah_anggota(self):
@@ -141,8 +141,8 @@ class Acara:
 
     def tampilkan_info(self):
         print("Nama Acara         :", self.nama_acara)
-        print("Tanggal            :", self.tanggal)
-        print("Penanggung Jawab   :", self.penanggung_jawab)
+        print("Tanggal:", self.tanggal)
+        print("Penanggung Jawab :", self.penanggung_jawab)
         print("Status             :", self.__status)
         print("Divisi Terlibat    :", ", ".join(
             divisi.nama_divisi for divisi in self._divisi
@@ -178,7 +178,8 @@ print("=" * 60)
 print(" SISTEM MANAJEMEN KEPANITIAAN DAN PELAKSANAAN MIT-WEEK 2025")
 print("=" * 60)
 
-print("\n--- INHERITANCE PANITIA ---")
+print()
+print("--- INHERITANCE PANITIA ---")
 ketua = KetuaPanitia("Riva", "Inti", "Mengatur seluruh kepanitiaan")
 koor_acara = KoordinatorPanitia("Ajiva", "Acara", 10)
 koor_lomba = KoordinatorPanitia("Rasyid", "Lomba", 8)
@@ -186,25 +187,29 @@ koor_lomba = KoordinatorPanitia("Rasyid", "Lomba", 8)
 ketua.tampilkan_info()
 print()
 koor_acara.tampilkan_info()
-print("\nCek inheritance:")
+print()
+print("Cek inheritance:")
 print("koor_acara adalah Panitia :", isinstance(koor_acara, Panitia))
 print("Koordinator turunan Panitia:", issubclass(KoordinatorPanitia, Panitia))
 
-print("\n--- CLASS DAN STATIC METHOD PANITIA ---")
+print()
+print("--- CLASS DAN STATIC METHOD PANITIA ---")
 print("Status sebelum diubah      :", Panitia.status_kegiatan)
 Panitia.ubah_status_kegiatan("Berlangsung")
 print("Status setelah diubah      :", Panitia.status_kegiatan)
 print("Validasi nama Riva         :", Panitia.validasi_nama("Riva"))
 print("Validasi nama kosong       :", Panitia.validasi_nama(""))
 
-print("\n--- GETTER, SETTER, PROTECTED, DAN PRIVATE ---")
+print()
+print("--- GETTER, SETTER, PROTECTED, DAN PRIVATE ---")
 print("Status ketua               :", ketua.status)
 ketua.status = "Tidak Aktif"
 print("Status ketua setelah diubah:", ketua.status)
 ketua.status = ""
 print("Kode protected koordinator:", koor_acara._kode_anggota)
 
-print("\n--- AGREGASI DIVISI ---")
+print()
+print("--- AGREGASI DIVISI ---")
 divisi_acara = Divisi("Acara", koor_acara.nama)
 divisi_lomba = Divisi("Lomba", koor_lomba.nama)
 divisi_acara.jumlah_anggota = 10
@@ -213,7 +218,8 @@ divisi_acara.tampilkan_info()
 print()
 divisi_lomba.tampilkan_info()
 
-print("\n--- DATA ACARA, ASOSIASI, DAN KOMPOSISI ---")
+print()
+print("--- DATA ACARA, ASOSIASI, DAN KOMPOSISI ---")
 acara1 = Acara("Seminar AI", "29 Oktober 2025", "Divisi Acara")
 acara2 = Acara("Lomba", "29 Oktober 2025", "Divisi Acara")
 
@@ -226,11 +232,13 @@ acara2.tambah_rundown("10.00", "Babak Penyisihan Lomba")
 
 ketua.koordinasikan_acara(acara1)
 acara1.tampilkan_info()
-print("\nDivisi tetap ada setelah referensi dilepas dari acara2:")
+print()
+print("Divisi tetap ada setelah referensi dilepas dari acara2:")
 acara2.lepas_divisi("Lomba")
 divisi_lomba.tampilkan_info()
 
-print("\n--- CLASS, STATIC METHOD, DAN PROPERTY ACARA ---")
+print()
+print("--- CLASS, STATIC METHOD, DAN PROPERTY ACARA ---")
 print("Format acara               :", Acara.format_acara)
 Acara.ubah_format_acara("Offline")
 print("Format setelah diubah      :", Acara.format_acara)
@@ -241,15 +249,18 @@ acara1.status = "Berlangsung"
 print("Status acara setelah diubah:", acara1.status)
 acara1.status = ""
 
-print("\n--- VALIDASI DIVISI ---")
+print()
+print("--- VALIDASI DIVISI ---")
 print("Jumlah 10 valid            :", Divisi.validasi_jumlah(10))
 print("Jumlah -5 valid            :", Divisi.validasi_jumlah(-5))
 divisi_acara.jumlah_anggota = -5
 print("Jumlah anggota tetap       :", divisi_acara.jumlah_anggota)
 
-print("\n--- REKAP DATA ---")
+print()
+print("--- REKAP DATA ---")
 print("Total Panitia              :", Panitia.total_panitia)
 print("Total Divisi               :", Divisi.total_divisi)
 print("Total Acara                :", Acara.total_acara)
 print("Komposisi Rundown         : dibuat internal oleh setiap Acara")
-print("\nProgram selesai.")
+print()
+print("Program selesai.")
