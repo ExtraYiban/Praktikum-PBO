@@ -1,4 +1,3 @@
-
 class Panitia:
 
     nama_kegiatan = "MIT-WEEK 2025"
