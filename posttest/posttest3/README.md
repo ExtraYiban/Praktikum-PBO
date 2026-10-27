@@ -53,10 +53,6 @@ Program CLI ini mengelola kepanitiaan, divisi, acara, notifikasi publikasi, dan 
 
 ---
 
-## Screenshot Output Program
-
-*(Masukkan screenshot terminal hasil eksekusi `python main.py` di sini)*
-
 ### Bukti Teks Output Eksekusi (Termasuk Bukti Abstract Class Tidak Bisa Diinstansiasi):
 
 ```text
